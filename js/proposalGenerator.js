@@ -11,7 +11,6 @@ function ProposalGenerator(gov) {
     this.gov.payment_amount = parseFloat($('#payment_amount').val().trim());
     this.gov.start_epoch = parseInt($('#start_epoch').val());
     this.gov.end_epoch = parseInt($('#end_epoch').val());
-  console.log(gov);
 
     // hidden elements
     this.gov.type = parseInt($('#type').val());
