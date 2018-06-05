@@ -1,21 +1,22 @@
-var Bitcore = require('bitcore-lib-dash');
+var Bitcore = require('bitcore-lib');
 
 var socket;
 var paymentCycle;
 
-var mainnetProvider = 'https://insight.dashevo.org';
-var mainnetPrefix = '/insight-api-dash';
+var mainnetProvider = 'http://explorer.zcore.cash:3001';
+var mainnetPrefix = '/insight-api-gobyte';
 
 var testnetProvider = 'https://testnet-insight.dashevo.org';
 var testnetPrefix = '/insight-api-dash';
 
 var init = function(network, provider, prefix) {
     var gov = new Bitcore.GovObject.Proposal();
+    console.log(Bitcore.GovObject);
     gov.network = network || 'mainnet';
 
-    paymentCycle = new PaymentCycle(gov, provider, prefix);
+    paymentCycle = new PaymentCycle(gov, provider, prefix); 
 
-    socket = io(provider);
+    var socket = io(provider);
 
     socket.on('connect', function() {
         socket.emit('subscribe', 'inv');
