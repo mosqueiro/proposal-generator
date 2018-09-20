@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/mosqueiro/proposal-generator#readme",
   "devDependencies": {
-    "bitcore-lib": "git+https://9674bae9d21d4f7fc53d66c10d6c1e6a23460f96@github.com/mosqueiro/zcr-bitcore-lib",
+    "bitcore-lib": "git+https://github.com/mosqueiro/zcr-bitcore-lib",
     "browserify": "^14.3.0",
     "eslint": "^4.8.0"
   }
